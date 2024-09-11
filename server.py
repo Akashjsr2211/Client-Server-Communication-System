@@ -30,9 +30,7 @@ def receive():
         print(f"server started listening...")
         client, address = server.accept()
         print(f"{str(address)} has been connected!")
-        # deff
         client.send(("Enter your nickname for the chat room >>> ").encode())
-         # deff
         nickname = client.recv(1024).decode()
         nicknames.append(nickname)
         clients.append(client)
